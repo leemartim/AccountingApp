@@ -5,7 +5,7 @@ public class AccountingApp {
 	public static void main(String[] args) {
 		
 		
-		double valueOfSupply = Double.parseDouble(args[0]);
+		double valueOfSupply = Double.parseDouble(JOptionPane.showInputDialog("금액을 입력하세요."));
         double vatRate = 0.1;
         double expenseRate = 0.3;
         double vat = valueOfSupply * vatRate;
