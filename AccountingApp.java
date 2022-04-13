@@ -22,14 +22,20 @@ public class AccountingApp {
        double dividend2 = income * dividendrates[1];
        double dividend3 = income * dividendrates[2];
        
+
+       
         System.out.println("판매원가 : " + valueOfSupply);
         System.out.println("부가세 : " + vat);
         System.out.println("합계 : " + total);
         System.out.println("원가 : " + expense);
         System.out.println("이익 : " + income);
-        System.out.println("Dividend 1 : " + dividend1);
-        System.out.println("Dividend 2 : " + dividend2);
-        System.out.println("Dividend 3 : " + dividend3);
+
+        int i = 0;
+        
+        while(i < dividendrates.length) {
+     	   System.out.println("Dividend : " + income * dividendrates[i]);
+     	   i = i + 1;
+        }
 		
 	}
 
