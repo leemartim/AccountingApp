@@ -12,21 +12,16 @@ public class AccountingApp {
         double total = valueOfSupply + vat;
         double expense = valueOfSupply * expenseRate;
         double income = valueOfSupply - expense;
-        double dividend1 = income * 0.5;
-        double dividend2 = income * 0.3;
-        double dividend3 = income * 0.2;
         
-        
-        if (income < 10000.0) {
-	        dividend1 = income * 1;
-	        dividend2 = income * 0;
-	        dividend3 = income * 0;
-        }else {
-        	dividend1 = income * 0.5;
-	        dividend2 = income * 0.3;
-	        dividend3 = income * 0.2;
-        }
-        
+       double[] dividendrates = new double[3];
+       dividendrates[0] = 0.5;
+       dividendrates[1] = 0.3;
+       dividendrates[2] = 0.2;
+       
+       double dividend1 = income * dividendrates[0];
+       double dividend2 = income * dividendrates[1];
+       double dividend3 = income * dividendrates[2];
+       
         System.out.println("판매원가 : " + valueOfSupply);
         System.out.println("부가세 : " + vat);
         System.out.println("합계 : " + total);
